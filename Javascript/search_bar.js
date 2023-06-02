@@ -24,7 +24,7 @@ function searchAndDisplayResults() {
 
   if (result.length > 0) {
     for (let i = 0; i < result.length; i++) {
-      searchResults.innerHTML += `<div onclick="displayProductInfo(event)"><img src="${result[i].image[0]}" alt="${result[i].name}"/>${result[i].name}</div>`;
+      searchResults.innerHTML += `<div onclick="displayProductInfo(event)"><img src="${result[i].image[0]}" alt="${result[i].name}" loading="lazy"/>${result[i].name}</div>`;
     }
     searchResults.innerHTML += `<div onclick="searchFor()">Seach for "${keyword}"<i class="ri-arrow-right-line"></i></div>`;
   } else if (keyword.length > 0) {

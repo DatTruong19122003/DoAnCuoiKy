@@ -166,6 +166,7 @@ body {
 	text-align: start;
 	background-color: #fff;
 	overflow: scroll;
+	overflow-x: hidden;
 	z-index: 1;
 	cursor: pointer;
 }
