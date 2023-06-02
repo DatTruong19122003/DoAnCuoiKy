@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Introduce</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/introduce.css" />
+		<link rel="stylesheet" href="../css/responsive.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="bgc-gray">
+				<div class="container">
+					<div class="header-top">
+						<div class="hamburger">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</div>
+
+						<a href="./index.html" class="header-logo"
+							><img src="../img/logo-black.png" alt="Logo"
+						/></a>
+						<form class="header-search-bar">
+							<input
+								type="search"
+								placeholder="What are you looking for ..."
+								value=""
+								id="search-input"
+								autocomplete="off"
+							/>
+							<i
+								type="submit"
+								class="ri-search-line"
+								onclick="searchFor()"
+							></i>
+							<div id="search-results" class=""></div>
+						</form>
+						<div class="header-icon">
+							<div class="cart-icon">
+								<a href="../html/cart.html">
+									<i class="ri-shopping-cart-line"></i>
+								</a>
+								<span class="cart-count">0</span>
+							</div>
+							<div class="user-icon">
+								<i class="ri-user-line"></i>
+								<div class="user-box">
+									<p class="name-user"></p>
+									<p class="email-user"></p>
+									<a class="link" href="#"></a>
+								</div>
+							</div>
+						</div>
+						<div></div>
+						<ul class="toggle-menu" style="width: 100%; order: 1">
+							<li class="menu-item">
+								<a href="./index.html" class="menu-link">Trang chủ</a>
+							</li>
+							<li class="menu-item">
+								<a href="./shop.html" class="menu-link">Shop</a>
+							</li>
+							<li class="menu-item">
+								<a
+									href="./introduce.html"
+									class="menu-link current-page"
+									aria-current="page"
+									>Giới thiệu</a
+								>
+							</li>
+							<img src="" alt="" />
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu">
+				<div class="container">
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="./index.html" class="menu-link">Trang chủ</a>
+						</li>
+						<li class="menu-item">
+							<a href="./shop.html" class="menu-link">Shop</a>
+						</li>
+						<li class="menu-item">
+							<a
+								href="./introduce.html"
+								class="menu-link current-page"
+								aria-current="page"
+								>Giới thiệu</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="intro">
+			<div class="container">
+				<div class="left">
+					<div class="avata">
+						<img src="../img/tải xuống.png" alt="avt" />
+					</div>
+					<div class="contact">
+						<div class="heading">
+							<i class="icon ri-user-line"></i>CONTACT ME
+						</div>
+						<div class="text-disc">
+							<p><i class="ri-phone-fill"></i>(+84) 932576952</p>
+							<p><i class="ri-mail-line"></i>dattruong@gmail.com</p>
+							<p><i class="ri-map-pin-2-fill"></i>Tân phú, HCM</p>
+						</div>
+					</div>
+					<div class="block"></div>
+				</div>
+				<div class="right">
+					<div class="about-me">
+						<div class="heading">
+							<i class="icon ri-user-line"></i>ABOUT ME
+						</div>
+						<div class="row">
+							<div class="col">
+								<span>MSSV:</span>
+								<span>2001215717</span>
+							</div>
+							<div class="col">
+								<span>Lớp học:</span>
+								<span>12DHTH14</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<span>Họ tên:</span>
+								<span>Trương Quốc Đạt</span>
+							</div>
+							<div class="col">
+								<span>Giới tính:</span>
+								<span>Nam</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<span>Ngành:</span>
+								<span>Công nghệ thông tin</span>
+							</div>
+							<div class="col">
+								<span>Project:</span>
+								<span>Website thương mại điện tử (Thời trang)</span>
+							</div>
+						</div>
+					</div>
+					<div class="about-project">
+						<div class="heading">
+							<i class="icon ri-projector-fill"></i>ABOUT PROJECT
+						</div>
+						<div class="col">
+							<span>Công nghệ:</span>
+							<span>HTML, CSS, JS</span>
+						</div>
+						<div class="col">
+							<span>Chức năng:</span>
+							<ul>
+								<li>Tìm kiếm sản phẩm</li>
+								<li>Đăng kí / Đăng nhập / Đăng xuất tài khoản</li>
+								<li>Thêm xoá sản phẩm vào giỏ hàng</li>
+								<li>Zoom hình ảnh sản phẩm</li>
+								<li>Lưu trữ trong LocalStorage</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="column column-1">
+					<img class="logo" src="../img/logo-black.png" alt="Logo" />
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Quisquam maxime nam molestias praesentium beatae explicabo
+						magni, qui exercitationem natus nostrum?
+					</p>
+					<ul class="list-social">
+						<li>
+							<a href="https://twitter.com/?lang=vi"
+								><i class="ri-twitter-line"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://vi-vn.facebook.com/"
+								><i class="ri-facebook-circle-fill"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/"
+								><i class="ri-instagram-line"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.pinterest.com/"
+								><i class="ri-pinterest-fill"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+				<div class="column column-2">
+					<div class="nav">
+						<h2 class="title">INFO</h2>
+						<ul class="nav-menu">
+							<li class="menu-item">
+								<a class="item-link" href="#">About</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Sell with us</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Shipping policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column column-3">
+					<div class="nav">
+						<h2 class="title">CONTACT US</h2>
+						<ul class="nav-menu">
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									>Available between 8AM to 8PM. Ready to answer your
+									questions.</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-map-pin-line"></i> Tân Phú, Hồ Chí
+									Minh, Việt Nam</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-mail-line"></i>abcd@email.com</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-phone-line"></i>(+84) 123-456-789</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column column-4">
+					<div class="nav">
+						<h2 class="title">NEWSLETTER</h2>
+						<div class="input-email">
+							<input
+								type="email"
+								name="email"
+								placeholder="email@example.com"
+							/>
+							<div class="focus-input"></div>
+						</div>
+						<button class="subcribe">SUBCRIBE</button>
+						<div class="list-pay">
+							<img src="../img/icon-pay-01.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-02.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-03.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-04.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-05.png.webp" alt="iconpay" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Srcipt -->
+		<script src="../Javascript/script.js"></script>
+		<script type="module" src="../Javascript/search_bar.js"></script>
+	</body>
+</html>

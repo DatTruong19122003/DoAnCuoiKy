@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart Shopping</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/cart.css" />
+		<link rel="stylesheet" href="../css/responsive.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="bgc-gray">
+				<div class="container">
+					<div class="header-top">
+						<div class="hamburger">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</div>
+
+						<a href="#" class="header-logo"
+							><img src="../img/logo-black.png" alt="Logo"
+						/></a>
+						<form class="header-search-bar">
+							<input
+								type="search"
+								placeholder="What are you looking for ..."
+								value=""
+								id="search-input"
+								autocomplete="off"
+							/>
+							<i
+								type="submit"
+								class="ri-search-line"
+								onclick="searchFor()"
+							></i>
+							<div id="search-results" class=""></div>
+						</form>
+						<div class="header-icon">
+							<div class="cart-icon">
+								<a href="./cart.html">
+									<i class="ri-shopping-cart-line"></i>
+								</a>
+								<span class="cart-count">0</span>
+							</div>
+							<div class="user-icon">
+								<i class="ri-user-line"></i>
+								<div class="user-box">
+									<p class="name-user"></p>
+									<p class="email-user"></p>
+									<a class="link" href="#"></a>
+								</div>
+							</div>
+						</div>
+						<div></div>
+						<ul class="toggle-menu" style="width: 100%; order: 1">
+							<li class="menu-item">
+								<a href="./index.html" class="menu-link">Trang chủ</a>
+							</li>
+							<li class="menu-item">
+								<a href="./shop.html" class="menu-link">Shop</a>
+							</li>
+							<li class="menu-item">
+								<a href="./introduce.html" class="menu-link"
+									>Giới thiệu</a
+								>
+							</li>
+							<img src="" alt="" />
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu">
+				<div class="container">
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="./index.html" class="menu-link">Trang chủ</a>
+						</li>
+						<li class="menu-item">
+							<a href="./shop.html" class="menu-link">Shop</a>
+						</li>
+						<li class="menu-item">
+							<a href="./introduce.html" class="menu-link">Giới thiệu</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="wrapper">
+			<div class="title">
+				<h1>Your cart</h1>
+				<a href="./shop.html">Continue shopping</a>
+			</div>
+			<div class="cart-warning hide">
+				<h1 class="cart_emty-title">Your car is empty</h1>
+				<button><a href="./shop.html">Continue shopping</a></button>
+				<h2 class="cart_login-title hide">Have an account?</h2>
+				<p class="cart_login-text hide">
+					<a href="./login.html">Log in</a>to check out faster.
+				</p>
+			</div>
+			<form action="#" class="products">
+				<div class="cart-contents">
+					<div class="title">
+						<div class="grid">
+							<div class="grid-product">PRODUCT</div>
+							<div></div>
+							<div class="grid-quantity">QUANTITY</div>
+							<div class="grid-total">TOTAL</div>
+						</div>
+					</div>
+					<div class="Products"></div>
+					<div class="payment">
+						<div class="sub-total">
+							<span>Subtotal</span>
+							<span class="price"></span>
+						</div>
+						<div class="btn-payment">
+							<a class="text" href="./index.html">PAYMENT</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+		<section class="Featured">
+			<div class="heading">Featured collection</div>
+			<div class="products">
+				<div class="product-card" onclick="ProductInfo(event)">
+					<div class="image">
+						<img
+							src="../img/product/mlouye-studio-denim-2.webp"
+							alt="Sudio Bag"
+						/>
+					</div>
+					<div class="content">
+						<h3 class="name-product">Sudio Bag</h3>
+						<span class="price-regular sale">690.000 đ</span
+						><span class="price-last">590.000 đ</span>
+					</div>
+				</div>
+				<div class="product-card" onclick="ProductInfo(event)">
+					<div class="image">
+						<img
+							src="../img/product/mlouye-brick-oil-yellow-1.webp"
+							alt="Brick"
+						/>
+					</div>
+					<div class="content">
+						<h3 class="name-product">Brick</h3>
+						<span class="price-regular sale">449.000 đ</span
+						><span class="price-last">385.000 đ</span>
+					</div>
+				</div>
+				<div class="product-card" onclick="ProductInfo(event)">
+					<div class="image">
+						<img
+							src="../img/product/mlouye-louise-slide-sandal-buttermilk-1.webp"
+							alt="Louise Slide Sandal"
+						/>
+					</div>
+					<div class="content">
+						<h3 class="name-product">Louise Slide Sandal</h3>
+						<span class="price-regular sale">849.000 đ</span
+						><span class="price-last">799.000 đ</span>
+					</div>
+				</div>
+				<div class="product-card" onclick="ProductInfo(event)">
+					<div class="image">
+						<img
+							src="../img/product/mlouye-pleated-heel-mules-beige-1.webp"
+							alt="Pleated Heel Mule"
+						/>
+					</div>
+					<div class="content">
+						<h3 class="name-product">Pleated Heel Mule</h3>
+						<span class="price-regular">495.000 đ</span>
+					</div>
+				</div>
+			</div>
+			<button class="more"><a href="./shop.html">View all</a></button>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="column column-1">
+					<img class="logo" src="../img/logo-black.png" alt="Logo" />
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Quisquam maxime nam molestias praesentium beatae explicabo
+						magni, qui exercitationem natus nostrum?
+					</p>
+					<ul class="list-social">
+						<li>
+							<a href="https://twitter.com/?lang=vi"
+								><i class="ri-twitter-line"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://vi-vn.facebook.com/"
+								><i class="ri-facebook-circle-fill"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/"
+								><i class="ri-instagram-line"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.pinterest.com/"
+								><i class="ri-pinterest-fill"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+				<div class="column column-2">
+					<div class="nav">
+						<h2 class="title">INFO</h2>
+						<ul class="nav-menu">
+							<li class="menu-item">
+								<a class="item-link" href="#">About</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Sell with us</a>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#">Shipping policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column column-3">
+					<div class="nav">
+						<h2 class="title">CONTACT US</h2>
+						<ul class="nav-menu">
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									>Available between 8AM to 8PM. Ready to answer your
+									questions.</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-map-pin-line"></i> Tân Phú, Hồ Chí
+									Minh, Việt Nam</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-mail-line"></i>abcd@email.com</a
+								>
+							</li>
+							<li class="menu-item">
+								<a class="item-link" href="#"
+									><i class="ri-phone-line"></i>(+84) 123-456-789</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="column column-4">
+					<div class="nav">
+						<h2 class="title">NEWSLETTER</h2>
+						<div class="input-email">
+							<input
+								type="email"
+								name="email"
+								placeholder="email@example.com"
+							/>
+							<div class="focus-input"></div>
+						</div>
+						<button class="subcribe">SUBCRIBE</button>
+						<div class="list-pay">
+							<img src="../img/icon-pay-01.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-02.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-03.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-04.png.webp" alt="iconpay" />
+							<img src="../img/icon-pay-05.png.webp" alt="iconpay" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../Javascript/cart.js"></script>
+		<script src="../Javascript/script.js"></script>
+		<script type="module" src="../Javascript/search_bar.js"></script>
+	</body>
+</html>

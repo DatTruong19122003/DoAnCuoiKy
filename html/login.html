@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/responsive.css" />
+	</head>
+	<body>
+		<div class="site">
+			<header class="header">
+				<div class="bgc-gray">
+					<div class="container">
+						<div class="header-top">
+							<div class="hamburger">
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+							</div>
+							<a href="./index.html" class="header-logo"
+								><img src="../img/logo-black.png" alt="Logo"
+							/></a>
+							<form class="header-search-bar">
+								<input
+									type="search"
+									placeholder="What are you looking for ..."
+									value=""
+									id="search-input"
+									autocomplete="off"
+								/>
+								<i
+									type="submit"
+									class="ri-search-line"
+									onclick="searchFor()"
+								></i>
+								<div id="search-results" class=""></div>
+							</form>
+							<div class="header-icon">
+								<div class="cart-icon">
+									<a href="../html/cart.html">
+										<i class="ri-shopping-cart-line"></i>
+									</a>
+									<span class="cart-count">0</span>
+								</div>
+								<div class="user-icon">
+									<i class="ri-user-line"></i>
+									<div class="user-box">
+										<p class="name-user"></p>
+										<p class="email-user"></p>
+										<a class="link" href="#"></a>
+									</div>
+								</div>
+							</div>
+							<div></div>
+							<ul class="toggle-menu" style="width: 100%; order: 1">
+								<li class="menu-item">
+									<a href="#" class="menu-link current-page"
+										>Trang chủ</a
+									>
+								</li>
+								<li class="menu-item">
+									<a href="../html/shop.html" class="menu-link"
+										>Shop</a
+									>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">Giới thiệu</a>
+								</li>
+								<img src="" alt="" />
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header-menu">
+					<div class="container">
+						<ul class="menu">
+							<li class="menu-item">
+								<a href="#" class="menu-link current-page">Trang chủ</a>
+							</li>
+							<li class="menu-item">
+								<a href="../html/shop.html" class="menu-link">Shop</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" class="menu-link">Giới thiệu</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="container form" id="container">
+					<div class="form-container sign-up-container">
+						<form id="form-signup">
+							<h1 class="title">Create Account</h1>
+							<form>
+								<input type="text" id="name" placeholder="Name" />
+								<input
+									type="email"
+									id="Email-signup"
+									placeholder="Email"
+									autocomplete="off"
+								/>
+								<input
+									type="password"
+									id="Pwd-signup"
+									placeholder="Password"
+								/>
+								<input
+									id="signup"
+									class="btn"
+									type="submit"
+									value="Sign up"
+								/>
+							</form>
+						</form>
+					</div>
+					<div class="form-container sign-in-container">
+						<form id="form-signin">
+							<h1 class="title">Sign in</h1>
+							<form>
+								<input
+									type="email"
+									id="Email-signin"
+									placeholder="Email"
+									autocomplete="off"
+								/>
+								<input
+									type="password"
+									id="Pwd-signin"
+									placeholder="Password"
+								/>
+								<input
+									id="signin"
+									class="btn"
+									type="submit"
+									value="Sign in"
+								/>
+							</form>
+						</form>
+					</div>
+					<div class="overlay-container">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left">
+								<h1>Welcome Back!</h1>
+								<p>
+									To keep connected with us please login with your
+									personal info
+								</p>
+								<button class="btn ghost" id="signIn">Sign In</button>
+							</div>
+							<div class="overlay-panel overlay-right">
+								<h1>Hello, Friend!</h1>
+								<p>
+									Enter your personal details and start journey with us
+								</p>
+								<button class="btn ghost" id="signUp">Sign Up</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div class="container">
+					<div class="column column-1">
+						<img class="logo" src="../img/logo-black.png" alt="Logo" />
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Quisquam maxime nam molestias praesentium beatae explicabo
+							magni, qui exercitationem natus nostrum?
+						</p>
+						<ul class="list-social">
+							<li>
+								<a href="https://twitter.com/?lang=vi"
+									><i class="ri-twitter-line"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://vi-vn.facebook.com/"
+									><i class="ri-facebook-circle-fill"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/"
+									><i class="ri-instagram-line"></i
+								></a>
+							</li>
+							<li>
+								<a href="https://www.pinterest.com/"
+									><i class="ri-pinterest-fill"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="column column-2">
+						<div class="nav">
+							<h2 class="title">INFO</h2>
+							<ul class="nav-menu">
+								<li class="menu-item">
+									<a class="item-link" href="#">About</a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#">Blog</a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#">Sell with us</a>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#">Shipping policy</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="column column-3">
+						<div class="nav">
+							<h2 class="title">CONTACT US</h2>
+							<ul class="nav-menu">
+								<li class="menu-item">
+									<a class="item-link" href="#"
+										>Available between 8AM to 8PM. Ready to answer
+										your questions.</a
+									>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#"
+										><i class="ri-map-pin-line"></i> Tân Phú, Hồ Chí
+										Minh, Việt Nam</a
+									>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#"
+										><i class="ri-mail-line"></i>abcd@email.com</a
+									>
+								</li>
+								<li class="menu-item">
+									<a class="item-link" href="#"
+										><i class="ri-phone-line"></i>(+84) 123-456-789</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="column column-4">
+						<div class="nav">
+							<h2 class="title">NEWSLETTER</h2>
+							<div class="input-email">
+								<input
+									type="email"
+									name="email"
+									placeholder="email@example.com"
+								/>
+								<div class="focus-input"></div>
+							</div>
+							<button class="subcribe">SUBCRIBE</button>
+							<div class="list-pay">
+								<img src="../img/icon-pay-01.png.webp" alt="iconpay" />
+								<img src="../img/icon-pay-02.png.webp" alt="iconpay" />
+								<img src="../img/icon-pay-03.png.webp" alt="iconpay" />
+								<img src="../img/icon-pay-04.png.webp" alt="iconpay" />
+								<img src="../img/icon-pay-05.png.webp" alt="iconpay" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="../Javascript/script.js"></script>
+		<script src="../Javascript/login.js"></script>
+	</body>
+</html>
