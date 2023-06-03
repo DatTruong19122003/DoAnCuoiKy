@@ -8,8 +8,11 @@ if (userCurrent === "" || userCurrent === null) {
 }
 else {
    const cartCount = document.querySelector(".cart-count");
-   cartCount.textContent = userCurrent.cart.length;
-   console.log("Check");
+   let totalQuantity = 0;
+   for (let i = 0; i < userCurrent.cart.length; i++) {
+      totalQuantity += userCurrent.cart[i].quantity;
+   }
+   cartCount.textContent = totalQuantity;
    document.querySelector('.name-user').textContent = userCurrent.name;
    document.querySelector('.email-user').textContent = userCurrent.email;
    const link = document.querySelector('.link');
