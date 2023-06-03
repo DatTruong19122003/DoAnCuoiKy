@@ -366,6 +366,32 @@ body {
 .hamburger.active .line:nth-child(3) {
 	transform: rotate(-45deg) translate(7px, -6px);
 }
+
+#backToTopBtn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	opacity: 0;
+	border-radius: 100vh;
+	background-color: #c7aa62be;
+	border: 1px solid white;
+	padding: 0.9rem 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+#backToTopBtn i {
+	color: white;
+}
+
+#backToTopBtn:hover {
+	background-color: #c7aa62;
+}
+
+#backToTopBtn.visible {
+	opacity: 1;
+}
+
 /* BANNER */
 .Banner {
 	display: flex;

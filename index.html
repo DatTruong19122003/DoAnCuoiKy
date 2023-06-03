@@ -103,6 +103,7 @@
 						</ul>
 					</div>
 				</div>
+				<button id="backToTopBtn"><i class="ri-arrow-up-line"></i></button>
 			</header>
 			<section class="Banner">
 				<div class="half-banner">
@@ -561,6 +562,20 @@
 
 			// Tạo interval để cập nhật đồng hồ đếm ngược sau mỗi giây
 			var countdownInterval = setInterval(updateCountdown, 1000);
+
+			window.addEventListener("scroll", () => {
+				const backToTopBtn = document.getElementById("backToTopBtn");
+				if (window.scrollY > 300) {
+					backToTopBtn.classList.add("visible");
+				} else {
+					backToTopBtn.classList.remove("visible");
+				}
+			});
+
+			const backToTopBtn = document.getElementById("backToTopBtn");
+			backToTopBtn.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
 		</script>
 	</body>
 </html>
