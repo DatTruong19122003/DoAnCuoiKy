@@ -96,24 +96,30 @@ function increaseQuantity(event, button) {
 	var quantity = parseInt(input.value);
 	var totalChange = document.getElementById(`total-${input.id}`);
 	var price = document.getElementsByClassName(`price-${input.id}`);
+	const cartCount = document.querySelector(".cart-count");
+	let totalQuantity = parseInt(cartCount.textContent);
 
 	input.value = quantity + 1;
 	totalChange.textContent = total(price[0].textContent, quantity + 1)
 	customerCurrent.cart[input.id - 1].quantity = quantity + 1;
 	subtotal += convertPricetoInt(price[0].textContent);
 	subToTal.textContent = convertInttoPrice(subtotal);
-
+	totalQuantity += 1
+	cartCount.textContent = totalQuantity;
 
 	localStorage.setItem("customerCurrent", JSON.stringify(customerCurrent));
 	event.preventDefault()
 }
-
+const cartCount = document.querySelector(".cart-count");
+let totalQuantity = parseInt(cartCount.textContent);
 function decreaseQuantity(event, button) {
 	var customerCurrent = JSON.parse(localStorage.getItem('customerCurrent'));
 	var input = button.previousElementSibling;
 	var quantity = parseInt(input.value);
 	var totalChange = document.getElementById(`total-${input.id}`);
 	var price = document.getElementsByClassName(`price-${input.id}`);
+	const cartCount = document.querySelector(".cart-count");
+	let totalQuantity = parseInt(cartCount.textContent);
 
 	if (quantity > 1) {
 		input.value = quantity - 1;
@@ -122,6 +128,8 @@ function decreaseQuantity(event, button) {
 		subtotal -= convertPricetoInt(price[0].textContent);
 		subToTal.textContent = convertInttoPrice(subtotal);
 		localStorage.setItem("customerCurrent", JSON.stringify(customerCurrent));
+		totalQuantity -= 1;
+		cartCount.textContent = totalQuantity;
 	}
 	else {
 		deleteProduct(input.id);
