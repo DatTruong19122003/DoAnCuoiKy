@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Product-page</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="../css/login.css" />
-		<link rel="stylesheet" href="../css/responsive.css" />
+		<link rel="stylesheet" href="./css/product-page.css" />
+		<link rel="stylesheet" href="./css/responsive.css" />
 	</head>
 	<body>
 		<div class="site">
@@ -23,8 +23,9 @@
 								<div class="line"></div>
 								<div class="line"></div>
 							</div>
-							<a href="../index.html" class="header-logo"
-								><img src="../img/logo-black.png" alt="Logo"
+
+							<a href="./index.html" class="header-logo"
+								><img src="./img/logo-black.png" alt="Logo"
 							/></a>
 							<form class="header-search-bar">
 								<input
@@ -43,7 +44,7 @@
 							</form>
 							<div class="header-icon">
 								<div class="cart-icon">
-									<a href="../html/cart.html">
+									<a href="./cart.html">
 										<i class="ri-shopping-cart-line"></i>
 									</a>
 									<span class="cart-count">0</span>
@@ -60,14 +61,12 @@
 							<div></div>
 							<ul class="toggle-menu" style="width: 100%; order: 1">
 								<li class="menu-item">
-									<a href="../index.html" class="menu-link"
+									<a href="./index.html" class="menu-link"
 										>Trang chủ</a
 									>
 								</li>
 								<li class="menu-item">
-									<a href="../html/shop.html" class="menu-link"
-										>Shop</a
-									>
+									<a href="./html/shop.html" class="menu-link">Shop</a>
 								</li>
 								<li class="menu-item">
 									<a href="#" class="menu-link">Giới thiệu</a>
@@ -81,94 +80,74 @@
 					<div class="container">
 						<ul class="menu">
 							<li class="menu-item">
-								<a href="../index.html" class="menu-link">Trang chủ</a>
+								<a href="./index.html" class="menu-link">Trang chủ</a>
 							</li>
 							<li class="menu-item">
-								<a href="../html/shop.html" class="menu-link">Shop</a>
+								<a href="./shop.html" class="menu-link">Shop</a>
 							</li>
 							<li class="menu-item">
-								<a href="#" class="menu-link">Giới thiệu</a>
+								<a href="./introduce.html" class="menu-link"
+									>Giới thiệu</a
+								>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</header>
-			<main>
-				<div class="container form" id="container">
-					<div class="form-container sign-up-container">
-						<form id="form-signup">
-							<h1 class="title">Create Account</h1>
-							<form>
-								<input type="text" id="name" placeholder="Name" />
-								<input
-									type="email"
-									id="Email-signup"
-									placeholder="Email"
-									autocomplete="off"
-								/>
-								<input
-									type="password"
-									id="Pwd-signup"
-									placeholder="Password"
-								/>
-								<input
-									id="signup"
-									class="btn"
-									type="submit"
-									value="Sign up"
-								/>
-							</form>
-						</form>
-					</div>
-					<div class="form-container sign-in-container">
-						<form id="form-signin">
-							<h1 class="title">Sign in</h1>
-							<form>
-								<input
-									type="email"
-									id="Email-signin"
-									placeholder="Email"
-									autocomplete="off"
-								/>
-								<input
-									type="password"
-									id="Pwd-signin"
-									placeholder="Password"
-								/>
-								<input
-									id="signin"
-									class="btn"
-									type="submit"
-									value="Sign in"
-								/>
-							</form>
-						</form>
-					</div>
-					<div class="overlay-container">
-						<div class="overlay">
-							<div class="overlay-panel overlay-left">
-								<h1>Welcome Back!</h1>
-								<p>
-									To keep connected with us please login with your
-									personal info
-								</p>
-								<button class="btn ghost" id="signIn">Sign In</button>
+			<div class="wrapper wrapper-product-page">
+				<section class="product-page product" id="product-page">
+					<div class="product-image">
+						<div class="zoomer">
+							<div class="image">
+								<img class="img-fluit" src="" alt="image" />
 							</div>
-							<div class="overlay-panel overlay-right">
-								<h1>Hello, Friend!</h1>
-								<p>
-									Enter your personal details and start journey with us
-								</p>
-								<button class="btn ghost" id="signUp">Sign Up</button>
-							</div>
+							<div class="result hide"></div>
+						</div>
+						<div class="img-small">
+							<img id="img-1" class="small-img" src="" alt="image" />
+							<img id="img-2" class="small-img" src="" alt="image" />
+							<img id="img-3" class="small-img" src="" alt="image" />
 						</div>
 					</div>
-				</div>
-			</main>
+					<div class="product-content">
+						<h1 class="title"></h1>
+						<div class="price">
+							<span class="price-regular"></span>
+							<span class="sale">
+								<span class="price-last"></span>
+								<div class="tag-sale">Sale</div>
+							</span>
+						</div>
+						<form onsubmit="return onSubmitForm(event)">
+							<select title="size" class="size" required>
+								<option value="">Select size</option>
+							</select>
+							<div class="quantity">
+								<p class="quantity-text">Quantity:</p>
+								<input
+									aria-label="quantity"
+									class="quantity-box"
+									type="number"
+									value="1"
+									min="1"
+									max="50"
+									name=""
+									id=""
+								/>
+							</div>
+							<button class="cart" type="submit">Add To Cart</button>
+						</form>
+					</div>
+				</section>
+				<section class="recommend">
+					<div class="heading">You may also like</div>
+					<div class="products" id="product-container"></div>
+				</section>
+			</div>
 			<footer>
 				<div class="container">
 					<div class="column column-1">
-						<img class="logo" src="../img/logo-black.png" alt="Logo" />
+						<img class="logo" src="./img/logo-black.png" alt="Logo" />
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							Quisquam maxime nam molestias praesentium beatae explicabo
@@ -258,18 +237,21 @@
 							</div>
 							<button class="subcribe">SUBCRIBE</button>
 							<div class="list-pay">
-								<img src="../img/icon-pay-01.png.webp" alt="iconpay" />
-								<img src="../img/icon-pay-02.png.webp" alt="iconpay" />
-								<img src="../img/icon-pay-03.png.webp" alt="iconpay" />
-								<img src="../img/icon-pay-04.png.webp" alt="iconpay" />
-								<img src="../img/icon-pay-05.png.webp" alt="iconpay" />
+								<img src="./img/icon-pay-01.png.webp" alt="iconpay" />
+								<img src="./img/icon-pay-02.png.webp" alt="iconpay" />
+								<img src="./img/icon-pay-03.png.webp" alt="iconpay" />
+								<img src="./img/icon-pay-04.png.webp" alt="iconpay" />
+								<img src="./img/icon-pay-05.png.webp" alt="iconpay" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<script src="../Javascript/script.js"></script>
-		<script src="../Javascript/login.js"></script>
+
+		<script type="module" src="./Javascript/Product.js"></script>
+		<script type="module" src="./Javascript/product-page.js"></script>
+		<script src="./Javascript/script.js"></script>
+		<script type="module" src="./Javascript/search_bar.js"></script>
 	</body>
 </html>

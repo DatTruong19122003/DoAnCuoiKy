@@ -35,7 +35,7 @@ function searchAndDisplayResults() {
 function searchFor() {
   let keyword = document.getElementById("search-input").value;
   if (keyword.length > 0) {
-    var Url = "../html/shop.html" + "?search=" + keyword;
+    var Url = "./shop.html" + "?search=" + keyword;
     window.location.href = Url;
   }
 }
@@ -43,7 +43,7 @@ window.searchFor = searchFor;
 
 function displayProductInfo(event) {
   var nameProduct = event.target.textContent;
-  var productPageURL = "../html/product-page.html" + "?name=" + nameProduct;
+  var productPageURL = "./product-page.html" + "?name=" + nameProduct;
   window.location.href = productPageURL;
 }
 window.displayProductInfo = displayProductInfo;

@@ -157,6 +157,7 @@ body {
 
 .header-search-bar #search-results {
 	width: calc(100% + 0.16rem);
+	max-height: 60vh;
 	position: absolute;
 	left: -0.08rem;
 	top: 4.34rem;
@@ -164,6 +165,8 @@ body {
 	border: 1px solid #b5b3af;
 	font-size: 1.4rem;
 	text-align: start;
+	overflow: scroll;
+	overflow-x: hidden;
 	background-color: #fff;
 	z-index: 1;
 	cursor: pointer;

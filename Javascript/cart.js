@@ -1,6 +1,6 @@
 // Lấy sản phẩm từ Local Storage
 const customerCurrent = JSON.parse(localStorage.getItem('customerCurrent'));
-const cartProduct = customerCurrent.cart;
+
 const cartContainer = document.querySelector('.Products');
 const subToTal = document.querySelector('.sub-total .price');
 const title = document.querySelector('.title');
@@ -10,11 +10,11 @@ const cart_loginText = document.querySelector('.cart_login-text');
 const cart_loginTitle = document.querySelector('.cart_login-title');
 var subtotal = 0;
 
-if (cartProduct == null || cartProduct == "") {
+if (customerCurrent == null || customerCurrent == "" || customerCurrent.cart.length == 0) {
 	title.classList.add("hide");
 	products.classList.add("hide");
 	cartWarning.classList.remove("hide");
-	if (cartProduct == null) {
+	if (customerCurrent == null || customerCurrent == "") {
 		cart_loginText.classList.remove("hide");
 		cart_loginTitle.classList.remove("hide");
 	}
@@ -22,37 +22,36 @@ if (cartProduct == null || cartProduct == "") {
 
 
 // Tạo các sản phẩm trong giỏ hàng dựa vào số lượng sản phẩm
-for (let i = 0; i < cartProduct.length; i++) {
-	console.log("check");
+for (let i = 0; i < customerCurrent.cart.length; i++) {
 	// Tạo các phần tử HTML tương ứng với sản phẩm
 	const productContainer = document.createElement('div');
 	productContainer.className = 'product';
 
 	const productImage = document.createElement('img');
 	productImage.className = 'product-image';
-	productImage.src = cartProduct[i].image;
+	productImage.src = customerCurrent.cart[i].image;
 	productImage.alt = '';
 
 	const productDescription = document.createElement('div');
 	productDescription.className = 'product-description';
 	const productName = document.createElement('p');
 	productName.className = 'name';
-	productName.textContent = cartProduct[i].name;
+	productName.textContent = customerCurrent.cart[i].name;
 	const productPrice = document.createElement('p');
 	productPrice.className = `price price-${i + 1}`;
-	productPrice.textContent = cartProduct[i].price;
+	productPrice.textContent = customerCurrent.cart[i].price;
 	const productSize = document.createElement('p');
 	productSize.className = 'size';
-	if (cartProduct[i].size != "")
-		productSize.textContent = "size:" + cartProduct[i].size;
+	if (customerCurrent.cart[i].size != "")
+		productSize.textContent = "size:" + customerCurrent.cart[i].size;
 
 	productDescription.appendChild(productName);
 	productDescription.appendChild(productPrice);
 	productDescription.appendChild(productSize);
 
 	// ... Tạo các phần tử HTML khác tương ứng
-	const quantity_number = cartProduct[i].quantity;
-	var toTal = total(cartProduct[i].price, cartProduct[i].quantity);
+	const quantity_number = customerCurrent.cart[i].quantity;
+	var toTal = total(customerCurrent.cart[i].price, customerCurrent.cart[i].quantity);
 	var priceNumber = convertPricetoInt(toTal);
 	subtotal += parseInt(priceNumber);
 	const productQuantity = `

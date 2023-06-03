@@ -99,7 +99,7 @@ formSignIn.addEventListener('submit', function (event) {
          alert("Đăng nhập thành công !!!");
          customerCurrent = checkAccount;
          localStorage.setItem("customerCurrent", JSON.stringify(customerCurrent));
-         window.location.href = '../html/index.html';
+         window.location.href = '../index.html';
       }
       else {
          alert("Sai mật khẩu !!!");

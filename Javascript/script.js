@@ -4,7 +4,7 @@ console.log(userCurrent);
 if (userCurrent === "" || userCurrent === null) {
    const link = document.querySelector('.link');
    link.textContent = "Sign in/up"
-   link.href = "../html/login.html";
+   link.href = "./login.html";
 }
 else {
    const cartCount = document.querySelector(".cart-count");
@@ -48,7 +48,7 @@ hamburger.addEventListener("click", function () {
 
 function ProductInfo(event) {
    const nameProduct = event.currentTarget.querySelector('.name-product').textContent;
-   var productPageURL = "../html/product-page.html" + "?name=" + nameProduct;
+   var productPageURL = ".//product-page.html" + "?name=" + nameProduct;
    console.log(productPageURL);
    window.location.href = productPageURL;
 }

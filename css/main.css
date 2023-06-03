@@ -157,6 +157,7 @@ body {
 
 .header-search-bar #search-results {
 	width: calc(100% + 0.16rem);
+	max-height: 60vh;
 	position: absolute;
 	left: -0.08rem;
 	top: 4.34rem;
@@ -165,6 +166,8 @@ body {
 	font-size: 1.4rem;
 	text-align: start;
 	background-color: #fff;
+	overflow: scroll;
+	overflow-x: hidden;
 	z-index: 1;
 	cursor: pointer;
 }
@@ -468,13 +471,16 @@ body {
 	margin-bottom: 5rem;
 }
 
-.products {
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+#product-container {
+	--item: 4;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-bottom: 5rem;
 }
 
 .product-card {
+	width: calc(100% / var(--item) - (2rem * (var(--item) - 1) / var(--item)));
 	position: relative;
 	cursor: pointer;
 }
@@ -503,18 +509,19 @@ body {
 	letter-spacing: 0.1rem;
 }
 
-.price-regular {
-	font-weight: 300;
-	margin-right: 2rem;
-}
 .product-count {
 	position: absolute;
-	top: 2.5rem;
-	right: 3rem;
+	top: 5rem;
+	right: 5rem;
 	font-size: 1.6rem;
 	font-weight: 300;
 	color: #666564;
 	line-height: 3;
+}
+
+.price-regular {
+	font-weight: 300;
+	margin-right: 2rem;
 }
 
 .price-last {
