@@ -115,7 +115,7 @@ function decreaseQuantity(event, button) {
 	var totalChange = document.getElementById(`total-${input.id}`);
 	var price = document.getElementsByClassName(`price-${input.id}`);
 
-	if (quantity > 0) {
+	if (quantity > 1) {
 		input.value = quantity - 1;
 		totalChange.textContent = total(price[0].textContent, quantity - 1)
 		customerCurrent.cart[input.id - 1].quantity = quantity - 1;
