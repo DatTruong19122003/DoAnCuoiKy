@@ -67,6 +67,12 @@ input:focus-visible {
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+button {
+	border: none;
+	outline: none;
 }
 
 body {
